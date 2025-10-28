@@ -7,9 +7,12 @@ public class TileMovement: MonoBehaviour
 
     private Vector3 startPosition;
     private Vector3 targetPosition;
+    private BuildingSpawner house;
+    private bool isHovered;
 
     private void Start()
     {
+        house = GetComponent<BuildingSpawner>();
         startPosition = transform.position;
         targetPosition = startPosition;
     }
@@ -20,11 +23,14 @@ public class TileMovement: MonoBehaviour
     }
     private void OnMouseEnter()
     {
+        isHovered = true;
         targetPosition = startPosition + Vector3.up * range;
+        house.BuildRandom(); 
     }
 
     private void OnMouseExit()
     {
+        isHovered = false;
         targetPosition = startPosition;
     }
 }
