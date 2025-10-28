@@ -12,7 +12,7 @@ public class BuildingThemeData : ScriptableObject
     {
         if(housePrefabs == null || housePrefabs.Count == 0)
         {
-            Debug.LogError("House prefab list is empty" + this.titleName);
+            Debug.LogError("Buildingrefab list is empty" + this.titleName);
             return null;
         }
         int randomIndex = Random.Range(0, housePrefabs.Count);

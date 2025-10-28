@@ -661,7 +661,7 @@ Transform:
   m_GameObject: {fileID: 716997582}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.8, y: 0, z: 13.4}
+  m_LocalPosition: {x: 20.8, y: 0, z: 13.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -729,6 +729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   house: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
+  isSpawning: 0
   offset: 0.05
 --- !u!114 &716997587
 MonoBehaviour:
@@ -1327,6 +1328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   house: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
+  isSpawning: 0
   offset: 0.05
 --- !u!33 &8607017834496040691
 MeshFilter:
