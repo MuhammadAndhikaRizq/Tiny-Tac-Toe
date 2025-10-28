@@ -13,13 +13,14 @@ public class BuildingSpawner : MonoBehaviour
     
     public void BuildRandom()
     {
-        
         GameObject gameObjectToBuild = house.GetRandomPrefab();
 
         if(gameObjectToBuild != null)
         {
             Vector3 spawnPos = point.position + Vector3.up * offset;
-            Instantiate(gameObjectToBuild, spawnPos, Quaternion.identity);
+            GameObject newBuilding = Instantiate(gameObjectToBuild, spawnPos, Quaternion.identity);
+
+            newBuilding.transform.SetParent(transform);
         }
     }
     
