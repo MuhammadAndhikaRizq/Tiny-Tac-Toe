@@ -3,16 +3,22 @@ using UnityEngine;
 public class BuildingSpawner : MonoBehaviour
 {
     public BuildingThemeData house;
+    private Transform point;
     [SerializeField] private float offset = 0.5f;
+    
+    private void Start()
+    {
+        point =  transform.Find("SpawnPoint");
+    }
     
     public void BuildRandom()
     {
-        Vector3 parent = transform.position;
+        
         GameObject gameObjectToBuild = house.GetRandomPrefab();
 
         if(gameObjectToBuild != null)
         {
-            Vector3 spawnPos = parent + Vector3.up * offset;
+            Vector3 spawnPos = point.position + Vector3.up * offset;
             Instantiate(gameObjectToBuild, spawnPos, Quaternion.identity);
         }
     }
