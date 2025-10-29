@@ -254,6 +254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 244714245}
+  - component: {fileID: 244714246}
   m_Layer: 0
   m_Name: '*GameManager*'
   m_TagString: Untagged
@@ -276,6 +277,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &244714246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244714244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ffb9b4bb19fed47a0b9a412d387283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 8431575574353342604}
+  - {fileID: 1772308397}
+  - {fileID: 1858104605}
+  - {fileID: 1169058926}
+  - {fileID: 754548882}
+  - {fileID: 1674479477}
+  - {fileID: 473808110}
+  - {fileID: 1086378614}
+  - {fileID: 1605113257}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,7 +602,7 @@ GameObject:
   - component: {fileID: 473808109}
   - component: {fileID: 473808108}
   - component: {fileID: 473808107}
-  - component: {fileID: 473808106}
+  - component: {fileID: 473808110}
   - component: {fileID: 473808105}
   - component: {fileID: 473808104}
   m_Layer: 0
@@ -653,21 +676,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &473808106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 473808102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e755a0b75fed94ba119fa3b02f4382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  house: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
-  isSpawning: 0
-  offset: 0.05
 --- !u!114 &473808107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,6 +690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   speed: 5
+  gameManager: {fileID: 244714246}
 --- !u!23 &473808108
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -738,6 +747,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 473808102}
   m_Mesh: {fileID: -5616087892306231479, guid: 6c231d25f422607439edc2f1b4cc124a, type: 3}
+--- !u!114 &473808110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473808102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce741e2639c9cef47bc478d6841bd4c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
+  computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
+  centerPoint: {fileID: 0}
+  offset: 0.05
+  isSpawning: 0
 --- !u!1 &587441210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1023,7 +1049,7 @@ GameObject:
   - component: {fileID: 754548881}
   - component: {fileID: 754548880}
   - component: {fileID: 754548879}
-  - component: {fileID: 754548878}
+  - component: {fileID: 754548882}
   - component: {fileID: 754548877}
   - component: {fileID: 754548876}
   m_Layer: 0
@@ -1097,21 +1123,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &754548878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 754548874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e755a0b75fed94ba119fa3b02f4382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  house: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
-  isSpawning: 0
-  offset: 0.05
 --- !u!114 &754548879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1126,6 +1137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   speed: 5
+  gameManager: {fileID: 244714246}
 --- !u!23 &754548880
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1182,6 +1194,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754548874}
   m_Mesh: {fileID: -5616087892306231479, guid: 6c231d25f422607439edc2f1b4cc124a, type: 3}
+--- !u!114 &754548882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754548874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce741e2639c9cef47bc478d6841bd4c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
+  computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
+  centerPoint: {fileID: 0}
+  offset: 0.05
+  isSpawning: 0
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,7 +1351,7 @@ GameObject:
   - component: {fileID: 1086378613}
   - component: {fileID: 1086378612}
   - component: {fileID: 1086378611}
-  - component: {fileID: 1086378610}
+  - component: {fileID: 1086378614}
   - component: {fileID: 1086378609}
   - component: {fileID: 1086378608}
   m_Layer: 0
@@ -1396,21 +1425,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &1086378610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1086378606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e755a0b75fed94ba119fa3b02f4382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  house: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
-  isSpawning: 0
-  offset: 0.05
 --- !u!114 &1086378611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1425,6 +1439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   speed: 5
+  gameManager: {fileID: 244714246}
 --- !u!23 &1086378612
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1481,6 +1496,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086378606}
   m_Mesh: {fileID: -5616087892306231479, guid: 6c231d25f422607439edc2f1b4cc124a, type: 3}
+--- !u!114 &1086378614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086378606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce741e2639c9cef47bc478d6841bd4c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
+  computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
+  centerPoint: {fileID: 0}
+  offset: 0.05
+  isSpawning: 0
 --- !u!1 &1104432786
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,7 +1611,7 @@ GameObject:
   - component: {fileID: 1169058925}
   - component: {fileID: 1169058924}
   - component: {fileID: 1169058923}
-  - component: {fileID: 1169058922}
+  - component: {fileID: 1169058926}
   - component: {fileID: 1169058921}
   - component: {fileID: 1169058920}
   m_Layer: 0
@@ -1653,21 +1685,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &1169058922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169058918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e755a0b75fed94ba119fa3b02f4382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  house: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
-  isSpawning: 0
-  offset: 0.05
 --- !u!114 &1169058923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1682,6 +1699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   speed: 5
+  gameManager: {fileID: 244714246}
 --- !u!23 &1169058924
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1738,6 +1756,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169058918}
   m_Mesh: {fileID: -5616087892306231479, guid: 6c231d25f422607439edc2f1b4cc124a, type: 3}
+--- !u!114 &1169058926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169058918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce741e2639c9cef47bc478d6841bd4c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
+  computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
+  centerPoint: {fileID: 0}
+  offset: 0.05
+  isSpawning: 0
 --- !u!1 &1380744365
 GameObject:
   m_ObjectHideFlags: 0
@@ -2215,7 +2250,7 @@ GameObject:
   - component: {fileID: 1605113256}
   - component: {fileID: 1605113255}
   - component: {fileID: 1605113254}
-  - component: {fileID: 1605113253}
+  - component: {fileID: 1605113257}
   - component: {fileID: 1605113252}
   - component: {fileID: 1605113251}
   m_Layer: 0
@@ -2289,21 +2324,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &1605113253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1605113249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e755a0b75fed94ba119fa3b02f4382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  house: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
-  isSpawning: 0
-  offset: 0.05
 --- !u!114 &1605113254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2318,6 +2338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   speed: 5
+  gameManager: {fileID: 244714246}
 --- !u!23 &1605113255
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2374,6 +2395,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605113249}
   m_Mesh: {fileID: -5616087892306231479, guid: 6c231d25f422607439edc2f1b4cc124a, type: 3}
+--- !u!114 &1605113257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605113249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce741e2639c9cef47bc478d6841bd4c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
+  computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
+  centerPoint: {fileID: 0}
+  offset: 0.05
+  isSpawning: 0
 --- !u!1 &1674479469
 GameObject:
   m_ObjectHideFlags: 0
@@ -2386,7 +2424,7 @@ GameObject:
   - component: {fileID: 1674479476}
   - component: {fileID: 1674479475}
   - component: {fileID: 1674479474}
-  - component: {fileID: 1674479473}
+  - component: {fileID: 1674479477}
   - component: {fileID: 1674479472}
   - component: {fileID: 1674479471}
   m_Layer: 0
@@ -2460,21 +2498,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &1674479473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1674479469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e755a0b75fed94ba119fa3b02f4382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  house: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
-  isSpawning: 0
-  offset: 0.05
 --- !u!114 &1674479474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2489,6 +2512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   speed: 5
+  gameManager: {fileID: 244714246}
 --- !u!23 &1674479475
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2545,6 +2569,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674479469}
   m_Mesh: {fileID: -5616087892306231479, guid: 6c231d25f422607439edc2f1b4cc124a, type: 3}
+--- !u!114 &1674479477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674479469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce741e2639c9cef47bc478d6841bd4c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
+  computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
+  centerPoint: {fileID: 0}
+  offset: 0.05
+  isSpawning: 0
 --- !u!1 &1772308389
 GameObject:
   m_ObjectHideFlags: 0
@@ -2557,7 +2598,7 @@ GameObject:
   - component: {fileID: 1772308396}
   - component: {fileID: 1772308395}
   - component: {fileID: 1772308394}
-  - component: {fileID: 1772308393}
+  - component: {fileID: 1772308397}
   - component: {fileID: 1772308392}
   - component: {fileID: 1772308391}
   m_Layer: 0
@@ -2631,21 +2672,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &1772308393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772308389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e755a0b75fed94ba119fa3b02f4382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  house: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
-  isSpawning: 0
-  offset: 0.05
 --- !u!114 &1772308394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2660,6 +2686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   speed: 5
+  gameManager: {fileID: 244714246}
 --- !u!23 &1772308395
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2716,6 +2743,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772308389}
   m_Mesh: {fileID: -5616087892306231479, guid: 6c231d25f422607439edc2f1b4cc124a, type: 3}
+--- !u!114 &1772308397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772308389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce741e2639c9cef47bc478d6841bd4c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
+  computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
+  centerPoint: {fileID: 0}
+  offset: 0.05
+  isSpawning: 0
 --- !u!1 &1858104597
 GameObject:
   m_ObjectHideFlags: 0
@@ -2728,7 +2772,7 @@ GameObject:
   - component: {fileID: 1858104604}
   - component: {fileID: 1858104603}
   - component: {fileID: 1858104602}
-  - component: {fileID: 1858104601}
+  - component: {fileID: 1858104605}
   - component: {fileID: 1858104600}
   - component: {fileID: 1858104599}
   m_Layer: 0
@@ -2802,21 +2846,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &1858104601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1858104597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e755a0b75fed94ba119fa3b02f4382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  house: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
-  isSpawning: 0
-  offset: 0.05
 --- !u!114 &1858104602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2831,6 +2860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   speed: 5
+  gameManager: {fileID: 244714246}
 --- !u!23 &1858104603
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2887,6 +2917,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858104597}
   m_Mesh: {fileID: -5616087892306231479, guid: 6c231d25f422607439edc2f1b4cc124a, type: 3}
+--- !u!114 &1858104605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858104597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce741e2639c9cef47bc478d6841bd4c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
+  computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
+  centerPoint: {fileID: 0}
+  offset: 0.05
+  isSpawning: 0
 --- !u!33 &558994427767832313
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3073,6 +3120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   speed: 5
+  gameManager: {fileID: 244714246}
 --- !u!65 &8431575574353342602
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3130,12 +3178,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3041050125416522668}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e755a0b75fed94ba119fa3b02f4382, type: 3}
+  m_Script: {fileID: 11500000, guid: ce741e2639c9cef47bc478d6841bd4c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  house: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
-  isSpawning: 0
+  player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
+  computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
+  centerPoint: {fileID: 0}
   offset: 0.05
+  isSpawning: 0
 --- !u!33 &8607017834496040691
 MeshFilter:
   m_ObjectHideFlags: 0

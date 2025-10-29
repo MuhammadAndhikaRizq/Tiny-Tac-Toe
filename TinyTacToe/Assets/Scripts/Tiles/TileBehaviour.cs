@@ -9,7 +9,7 @@ public class TileBehaviour : MonoBehaviour
     public BuildingThemeData computer;
 
     [Header("Spawn Settings")]
-    public Transform centerPoint;
+    private Transform centerPoint;
     public float offset = 0.05f;
     public bool isSpawning;
 
@@ -17,8 +17,11 @@ public class TileBehaviour : MonoBehaviour
     private GameObject currentBuilding;
 
     public bool IsEmpty => currentState == TileState.Empty;
-
-
+        
+    private void Start()
+    {
+        centerPoint =  transform.Find("SpawnPoint");
+    }
     public void PlacePlayerBuilding()
     {
         if (!IsEmpty) return;
@@ -41,9 +44,9 @@ public class TileBehaviour : MonoBehaviour
         if(gameObjectToBuild != null && isSpawning == false)
         {
             Vector3 spawnPos = centerPoint.position + Vector3.up * offset;
-            GameObject newBuilding = Instantiate(gameObjectToBuild, spawnPos, Quaternion.identity);
+            currentBuilding = Instantiate(gameObjectToBuild, spawnPos, Quaternion.identity);
 
-            newBuilding.transform.SetParent(transform);
+            currentBuilding.transform.SetParent(transform);
 
             isSpawning = true;
         }

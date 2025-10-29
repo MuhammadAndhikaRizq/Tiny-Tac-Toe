@@ -5,14 +5,16 @@ public class TileMovement: MonoBehaviour
     [SerializeField] private float range = 1f;
     [SerializeField] private float speed = 5f;
 
+    public GameManager gameManager;
+
     private Vector3 startPosition;
     private Vector3 targetPosition;
-    private BuildingSpawner house;
+    private TileBehaviour player;
     private bool isHovered;
 
     private void Start()
     {
-        house = GetComponent<BuildingSpawner>();
+        player = GetComponent<TileBehaviour>();
         startPosition = transform.position;
         targetPosition = startPosition;
     }
@@ -25,7 +27,7 @@ public class TileMovement: MonoBehaviour
     {
         isHovered = true;
         targetPosition = startPosition + Vector3.up * range;
-        house.BuildRandom(); 
+        gameManager.OnTileSelected(player);
     }
 
     private void OnMouseExit()
