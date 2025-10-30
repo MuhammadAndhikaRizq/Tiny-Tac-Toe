@@ -10,7 +10,7 @@ public class TileBehaviour : MonoBehaviour
     public BuildingThemeData computer;
 
     [Header("Spawn Settings")]
-    private Transform centerPoint;
+    [SerializeField] private Transform centerPoint;
     public float offset = 0.05f;
     public bool isSpawning;
 
@@ -19,11 +19,6 @@ public class TileBehaviour : MonoBehaviour
     private GameObject currentBuilding;
 
     public bool IsEmpty => currentState == TileState.Empty;
-
-    private void Start()
-    {
-        centerPoint = transform.Find("SpawnPoint");
-    }
     
     public void PlacePlayerBuilding()
     {

@@ -760,6 +760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
   computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
+  centerPoint: {fileID: 587441211}
   offset: 0.05
   isSpawning: 0
 --- !u!1 &587441210
@@ -1205,6 +1206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
   computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
+  centerPoint: {fileID: 1574100315}
   offset: 0.05
   isSpawning: 0
 --- !u!1 &832575517
@@ -1505,6 +1507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
   computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
+  centerPoint: {fileID: 1527536234}
   offset: 0.05
   isSpawning: 0
 --- !u!1 &1104432786
@@ -1763,6 +1766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
   computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
+  centerPoint: {fileID: 1380744366}
   offset: 0.05
   isSpawning: 0
 --- !u!1 &1380744365
@@ -2400,6 +2404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
   computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
+  centerPoint: {fileID: 1104432787}
   offset: 0.05
   isSpawning: 0
 --- !u!1 &1674479469
@@ -2572,6 +2577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
   computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
+  centerPoint: {fileID: 635138587}
   offset: 0.05
   isSpawning: 0
 --- !u!1 &1772308389
@@ -2744,6 +2750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
   computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
+  centerPoint: {fileID: 1599655285}
   offset: 0.05
   isSpawning: 0
 --- !u!1 &1858104597
@@ -2916,6 +2923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
   computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
+  centerPoint: {fileID: 240996741}
   offset: 0.05
   isSpawning: 0
 --- !u!33 &558994427767832313
@@ -3166,6 +3174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
   computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
+  centerPoint: {fileID: 4674066308631466326}
   offset: 0.05
   isSpawning: 0
 --- !u!33 &8607017834496040691
