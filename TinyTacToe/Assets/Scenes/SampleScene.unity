@@ -690,7 +690,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   speed: 5
-  gameManager: {fileID: 244714246}
 --- !u!23 &473808108
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -761,7 +760,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
   computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
-  centerPoint: {fileID: 0}
   offset: 0.05
   isSpawning: 0
 --- !u!1 &587441210
@@ -1137,7 +1135,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   speed: 5
-  gameManager: {fileID: 244714246}
 --- !u!23 &754548880
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1208,7 +1205,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
   computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
-  centerPoint: {fileID: 0}
   offset: 0.05
   isSpawning: 0
 --- !u!1 &832575517
@@ -1439,7 +1435,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   speed: 5
-  gameManager: {fileID: 244714246}
 --- !u!23 &1086378612
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1510,7 +1505,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
   computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
-  centerPoint: {fileID: 0}
   offset: 0.05
   isSpawning: 0
 --- !u!1 &1104432786
@@ -1699,7 +1693,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   speed: 5
-  gameManager: {fileID: 244714246}
 --- !u!23 &1169058924
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1770,7 +1763,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
   computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
-  centerPoint: {fileID: 0}
   offset: 0.05
   isSpawning: 0
 --- !u!1 &1380744365
@@ -2338,7 +2330,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   speed: 5
-  gameManager: {fileID: 244714246}
 --- !u!23 &1605113255
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2409,7 +2400,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
   computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
-  centerPoint: {fileID: 0}
   offset: 0.05
   isSpawning: 0
 --- !u!1 &1674479469
@@ -2512,7 +2502,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   speed: 5
-  gameManager: {fileID: 244714246}
 --- !u!23 &1674479475
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2583,7 +2572,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
   computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
-  centerPoint: {fileID: 0}
   offset: 0.05
   isSpawning: 0
 --- !u!1 &1772308389
@@ -2686,7 +2674,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   speed: 5
-  gameManager: {fileID: 244714246}
 --- !u!23 &1772308395
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2757,7 +2744,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
   computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
-  centerPoint: {fileID: 0}
   offset: 0.05
   isSpawning: 0
 --- !u!1 &1858104597
@@ -2860,7 +2846,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   speed: 5
-  gameManager: {fileID: 244714246}
 --- !u!23 &1858104603
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2931,7 +2916,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
   computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
-  centerPoint: {fileID: 0}
   offset: 0.05
   isSpawning: 0
 --- !u!33 &558994427767832313
@@ -3120,7 +3104,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1
   speed: 5
-  gameManager: {fileID: 244714246}
 --- !u!65 &8431575574353342602
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3183,7 +3166,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: fc2a001c3a2f1c640a2df2ebb0ea1c9c, type: 2}
   computer: {fileID: 11400000, guid: c011e0a2586fe6745b6a63b7f9eb1a97, type: 2}
-  centerPoint: {fileID: 0}
   offset: 0.05
   isSpawning: 0
 --- !u!33 &8607017834496040691

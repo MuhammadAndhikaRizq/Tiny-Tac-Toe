@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using UnityEngine;
 
@@ -13,15 +14,17 @@ public class TileBehaviour : MonoBehaviour
     public float offset = 0.05f;
     public bool isSpawning;
 
+    public event Action<TileBehaviour> OnBuildBuilding;
     private TileState currentState = TileState.Empty;
     private GameObject currentBuilding;
 
     public bool IsEmpty => currentState == TileState.Empty;
-        
+
     private void Start()
     {
-        centerPoint =  transform.Find("SpawnPoint");
+        centerPoint = transform.Find("SpawnPoint");
     }
+    
     public void PlacePlayerBuilding()
     {
         if (!IsEmpty) return;

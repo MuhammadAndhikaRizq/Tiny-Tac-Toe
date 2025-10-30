@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class TileMovement: MonoBehaviour
@@ -5,16 +6,15 @@ public class TileMovement: MonoBehaviour
     [SerializeField] private float range = 1f;
     [SerializeField] private float speed = 5f;
 
-    public GameManager gameManager;
-
     private Vector3 startPosition;
     private Vector3 targetPosition;
-    private TileBehaviour player;
-    private bool isHovered;
+    private TileBehaviour tileBuilding;
+
+    public event Action<TileBehaviour> OnBuild;
 
     private void Start()
     {
-        player = GetComponent<TileBehaviour>();
+        tileBuilding = GetComponent<TileBehaviour>(); 
         startPosition = transform.position;
         targetPosition = startPosition;
     }
@@ -23,16 +23,15 @@ public class TileMovement: MonoBehaviour
     {
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * speed);
     }
-    private void OnMouseEnter()
+    private void OnMouseDown()
     {
-        isHovered = true;
         targetPosition = startPosition + Vector3.up * range;
-        gameManager.OnTileSelected(player);
+
+        OnBuild?.Invoke(tileBuilding);
     }
 
     private void OnMouseExit()
     {
-        isHovered = false;
         targetPosition = startPosition;
     }
 }

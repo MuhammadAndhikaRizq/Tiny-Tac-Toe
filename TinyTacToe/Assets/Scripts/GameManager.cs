@@ -4,7 +4,36 @@ using System.Linq;
 public class GameManager : MonoBehaviour
 {
     public TileBehaviour[] tiles;
+   
     private bool playerTurn = true;
+
+    private void OnEnable()
+    {
+        foreach(TileBehaviour tile in tiles)
+        {
+            TileMovement tileMovement = tile.GetComponent<TileMovement>();
+
+            if(tileMovement != null)
+            {
+                tileMovement.OnBuild += OnTileSelected;
+            }
+        }
+        
+    }
+
+    private void OnDisable()
+    {
+        foreach(TileBehaviour tile in tiles)
+        {
+            TileMovement tileMovement = tile.GetComponent<TileMovement>();
+
+            if(tileMovement != null)
+            {
+                tileMovement.OnBuild -= OnTileSelected;
+            }
+        }
+    }
+
 
     public void OnTileSelected(TileBehaviour tile)
     {
