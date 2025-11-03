@@ -42,11 +42,14 @@ public class GameManager : MonoBehaviour
     {
         foreach(TileBehaviour tile in tiles)
         {
-            TileMovement tileMovement = tile.GetComponent<TileMovement>();
-
-            if(tileMovement != null)
+            if(tile != null)
             {
-                tileMovement.OnBuild -= OnTileSelected;
+                TileMovement tileMovement = tile.GetComponent<TileMovement>();
+
+                 if(tileMovement != null)
+                {
+                    tileMovement.OnBuild -= OnTileSelected;
+                }
             }
         }
     }
@@ -55,10 +58,12 @@ public class GameManager : MonoBehaviour
     public void OnTileSelected(TileBehaviour tile)
     {
         Debug.Log("Kepanggil ga nihh");
-        // if (playerTurn || gameIsOver || tile.IsEmpty) return;
+        if (!playerTurn || gameIsOver || !tile.IsEmpty) return;
 
         Debug.Log("Holaa");
+
         int clickedIndex = -1;
+        
         for (int i = 0; i < tiles.Length; i++)
         {
             if (tiles[i] == tile)
