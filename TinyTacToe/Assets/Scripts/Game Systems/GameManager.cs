@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     private bool gameIsOver = false;
 
     private TileState[] boardState;
+    private PlayerDeck playerDeck;
 
     public const TileState PlayerMaker = TileState.Player;
     public const TileState ComputerMaker = TileState.Computer;
@@ -18,10 +19,12 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         boardState = new TileState[9];
-        for(int i = 0; i < 9; i++)
+        for (int i = 0; i < 9; i++)
         {
             boardState[i] = TileState.Empty;
         }
+        
+        playerDeck = SaveManager.Instance.LoadDeck();
     }
 
     private void OnEnable()
@@ -129,6 +132,12 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Seri!");
         }
+
+        BoardBluePrint newBluePrint = new BoardBluePrint(boardState);
+        playerDeck.bluePrints.Add(newBluePrint);
+        SaveManager.Instance.SaveDeck(playerDeck);
+
+        Debug.Log("Board Save to deck");
     }
    
 }
