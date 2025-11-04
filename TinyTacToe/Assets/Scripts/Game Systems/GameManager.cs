@@ -3,7 +3,10 @@ using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
-    public TileBehaviour[] tiles;
+    [Header("Board Information")]
+    [SerializeField] private TileBehaviour[] tiles;
+    [SerializeField] private GameObject boardActive;
+
     [SerializeField] private AIController aIController;
 
     [Header("Game State")]
@@ -11,7 +14,6 @@ public class GameManager : MonoBehaviour
     private bool gameIsOver = false;
 
     private TileState[] boardState;
-    private PlayerDeck playerDeck;
 
     public const TileState PlayerMaker = TileState.Player;
     public const TileState ComputerMaker = TileState.Computer;
@@ -23,8 +25,6 @@ public class GameManager : MonoBehaviour
         {
             boardState[i] = TileState.Empty;
         }
-        
-        playerDeck = SaveManager.Instance.LoadDeck();
     }
 
     private void OnEnable()
@@ -122,22 +122,19 @@ public class GameManager : MonoBehaviour
 
         if (winner == PlayerMaker)
         {
+            BoardManager.Instance.AddToInventory(boardActive);
             Debug.Log("Player Menang!");
         }
         else if (winner == ComputerMaker)
         {
+            BoardManager.Instance.AddToInventory(boardActive);
             Debug.Log("Komputer Menang!");
         }
         else
         {
+            BoardManager.Instance.AddToInventory(boardActive);
             Debug.Log("Seri!");
         }
-
-        BoardBluePrint newBluePrint = new BoardBluePrint(boardState);
-        playerDeck.bluePrints.Add(newBluePrint);
-        SaveManager.Instance.SaveDeck(playerDeck);
-
-        Debug.Log("Board Save to deck");
     }
    
 }

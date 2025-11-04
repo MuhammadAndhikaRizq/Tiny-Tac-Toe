@@ -14,7 +14,6 @@ public class TileBehaviour : MonoBehaviour
     public float offset = 0.05f;
     public bool isSpawning;
 
-    public event Action<TileBehaviour> OnBuildBuilding;
     private TileState currentState = TileState.Empty;
     private GameObject currentBuilding;
 
