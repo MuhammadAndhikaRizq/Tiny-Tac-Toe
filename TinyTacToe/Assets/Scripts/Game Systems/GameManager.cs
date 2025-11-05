@@ -122,19 +122,18 @@ public class GameManager : MonoBehaviour
 
         if (winner == PlayerMaker)
         {
-            BoardManager.Instance.AddToInventory(boardActive);
             Debug.Log("Player Menang!");
         }
         else if (winner == ComputerMaker)
         {
-            BoardManager.Instance.AddToInventory(boardActive);
             Debug.Log("Komputer Menang!");
         }
         else
         {
-            BoardManager.Instance.AddToInventory(boardActive);
             Debug.Log("Seri!");
         }
+
+        BoardManager.Instance.AddToInventory(boardState);
     }
    
 }

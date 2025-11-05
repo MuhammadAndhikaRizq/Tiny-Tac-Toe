@@ -6,12 +6,17 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName ="Board", menuName = "ScriptableObjects/InventoryBoard")]
 public class InventoryBoard : ScriptableObject
 {
-    [SerializeField]
-    public List<GameObject> boardCollections;
+    [SerializeField]private List<BoardData> boardCollections = new List<BoardData>();
 
-    public void AddBoard(GameObject board)
+    public void AddBoard(TileState[] layout)
     {
-        if(!boardCollections.Contains(board))
-            boardCollections.Add(board);
+        var data = new BoardData
+        {
+            boardLayout = (TileState[])layout.Clone(),
+        };
+
+        boardCollections.Add(data);
     }
+
+    public List<BoardData> GetAllBoards() => boardCollections;
 }

@@ -17,8 +17,8 @@ public class BoardManager : MonoBehaviour
             Instance = this;
         }
     }
-    public void AddToInventory(GameObject boardActive)
+    public void AddToInventory(TileState[] layout)
     {
-        boardToSave.AddBoard(boardActive);
+        boardToSave.AddBoard(layout);
     }
 }
